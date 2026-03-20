@@ -6,8 +6,8 @@ import { useAuthStore } from '../../store/authStore';
 import { toast } from 'react-toastify';
 
 const AdminStaffLogin = () => {
-  const [email, setEmail] = useState('admin@rentalbreaker.com');
-  const [password, setPassword] = useState('Admin@123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const setAuth = useAuthStore((s) => s.setAuth);
   const navigate = useNavigate();
@@ -69,7 +69,7 @@ const AdminStaffLogin = () => {
               className="w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
+              placeholder=""
             />
           </div>
 
